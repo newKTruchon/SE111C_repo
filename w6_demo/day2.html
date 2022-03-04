@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W6 | JS Functions</title>
+</head>
+<body>
+    <!--we should have some HTML in the document-->
+    <h1>W6 JS Functions & Conditions Demo</h1>
+
+    <!--IN-DOCUMENT Javascript-->
+    <script>
+        var preference = prompt(`Would you like to order take-out?\nType 'yes' or 'no'`)
+        console.log(`preference = ${preference}`)
+
+        //function definition below
+        function checkDining(_preference)
+        {
+            console.log(`inside checkDining() code`)
+
+            if(_preference.toLowerCase() === `yes`)
+            {
+                //when condition evals as true, code in here runs; when it evals as false it is skipped (and else runs if present)
+                console.log(`take-out`)
+                return `TAKE_OUT`
+
+            }
+            else
+            {
+                console.log(`dine-in`)
+                return `DINE_IN`
+            }
+        }//checkDining() CLOSE
+
+        //functions must be defined before they can be used; to use a function, call it (see below)
+        var dining = checkDining(preference)
+        console.log(dining)
+
+        var order = prompt(`Got it, you are ordering for ${dining}. Please enter the number of the item you would like today: \n1. Hamburger\n2. French Fries\n3. Milkshake!`)
+        console.log(order)
+
+        function foodOrDrink(_order)
+        {
+            if(_order < 3)
+            {
+                return `You want some FOOD.`
+            }
+            else if(_order === 3)
+            {
+                return `Milkshake time!`
+            }
+            else
+            {
+                return `That is not a valid option.`
+            }
+        }//foodOrDrink() CLOSE
+
+        alert(`Your choice: ${foodOrDrink(Number(order))}`)
+
+        function calcPriceWithTax(_price, _tax)
+        {
+            /*
+                JAVASCRIPT BLOCK COMMENT
+            var newPrice = _price + (_price * (_tax/100))
+            return newPrice
+            */
+
+            return _price + (_price * (_tax/100))
+        }//calcPriceWithTax() CLOSE
+        
+        //function below's return values will be the possible CASES for the SWITCH STATEMENT in getTotal()
+        function getItem(_order)
+        {
+            if(_order === `1`)
+            {
+                return `Hamburger`
+            }
+            else if(_order === `2`)
+            {
+                return `French Fries`
+            }
+            else if(_order === `3`)
+            {
+                return `Milkshake!`
+            }
+            else
+            {
+                return `Nothing`
+            }
+        }//getItem() CLOSE
+
+        var item = getItem(order)
+        console.log(item)
+
+        function getTotal(_item, _tax)
+        {
+            switch(_item)//switch statement
+            {
+                case `Hamburger`:
+                    return calcPriceWithTax(3.00, _tax)
+                    break; //removes us out of the switch block { }
+
+                case `French Fries`:
+                    return calcPriceWithTax(1.00, _tax)
+                    break;
+
+                case `Milkshake!`:
+                    return calcPriceWithTax(5.00, _tax)
+                    break;
+
+                case `Nothing`:
+                    return calcPriceWithTax(0.00, _tax)
+                    break;
+            }
+        }//getTotal() CLOSE
+
+        var total = getTotal(item, 20).toFixed(2)
+        console.log(`The total price of ${item} with tax is: $${total.toFixed(2)}`)
+
+        /*CHALLENGE! continue the program by:
+            * asking the user how much money they pay with
+            * determine if that amount covers the build
+                    **if money < total ...
+            * calculate their change 
+            * display user their change
+             
+        */
+    
+    </script>
+    
+</body>
+</html>

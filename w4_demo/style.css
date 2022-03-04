@@ -1,0 +1,103 @@
+/*ENTIRE SITE----------------------------*/
+body {
+    background-color:grey;
+     
+}
+
+
+#container {
+
+    width:50%;
+    margin:auto;
+    background-color:black;
+    color:white;
+    padding:20px;
+    height:100%;
+    box-shadow: 8px 8px 8px black;
+
+}
+
+
+div {
+
+    border:1px solid black;
+    padding:10px;
+    margin-bottom:10px;
+
+}
+
+hr {
+    background-color:darkgrey;
+    height:2px;
+    border:none;
+}
+
+/*HEADER----------------------------------*/
+#header, #footer {
+    text-align:center;
+    
+}
+
+#header h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size:120px;
+    text-shadow: 0 0 9px #d84214;
+}
+
+#subline {
+    font-size:48px; 
+    margin-top:-50px;
+}
+
+/*NAVIGATION------------------------------*/
+
+#nav {
+    background-color:#d85831;
+    padding:15px;
+    text-align:center;
+    height:60px;
+
+}
+
+a {
+    width:150px;
+    font-size:34px;
+    margin-right:20px;
+    padding:5px;
+    height:50px;
+    line-height:50px;
+    text-decoration:none;
+    background-color:black;
+    display:inline-block;
+    font-family: 'Bebas Neue', cursive;
+    color:white;
+   
+}
+
+a:hover {
+    background-image:url();
+    color:rgb(139, 159, 246);
+
+}
+
+img {
+
+    padding:10px;
+    border:1px solid #d84214;
+}
+
+
+/*CONTENT---------------------------------*/
+
+.character {
+
+    border:none;
+
+}
+
+.character hr {
+
+    background-color:white;
+    height:1px;
+    border:none;
+}

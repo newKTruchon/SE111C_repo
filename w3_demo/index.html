@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="KT">
+    <meta name="description" content="W3 Demo">
+
+    <title>W3 | Demo</title>
+
+    <!--in-document styling-->
+    <style>
+        /*writing in CSS*/
+        div {/*selects ALL of the elements of this type (div) on the page*/
+
+            border:1px solid black;
+            padding:10px;
+            margin:5px;
+        }
+
+        #wrapper {/*selects ONE element, the one with the id value of 'wrapper'*/
+
+            background-color:darkgray;
+            width:900px;
+            margin:auto; /*affects left and right side of element when a width is applied*/
+
+        }
+
+        .border {/*selects ALL elements with a cladd of 'border'*/
+
+            border:2px solid grey;
+
+        }
+
+        .bg-main {
+            background-color:white;
+        }
+
+        .title {/*elements of different types can still be classed together*/
+
+            color:darkslateblue;
+
+        }
+
+        #nav {
+            /*border:1px solid red;*/
+            text-align:center;
+            padding:20px;
+        }
+
+        .button {
+
+            width:150px;
+            background-color:darkslateblue;
+            color:white;
+            font-size:26px;
+            margin-right:20px;
+            text-decoration:none;
+            padding:10px;
+
+        }
+
+        .button:hover{
+            background-color:white;
+            color:darkslateblue;
+        }
+
+        #footer {
+            text-align:center;
+        }
+
+        #header {
+            text-align:center;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <!--wrapper - contains all content on page-->
+    <div id="wrapper">
+
+        <!--header - first to load on page, tells user where they are/what site is about-->
+        <div id="header" class="border bg-main">
+
+            <h1 class="title">Katharine M. Truchon</h1>
+
+        </div><!--/ #header-->
+
+        <!--navigation bar - holds links to other pages within the site-->
+        <div id="nav" class="border">
+
+            <a href="index.html" class="button">HOME</a>
+            <a href="about.html" class="button">ABOUT</a>
+            <a href="schools.html" class="button">SCHOOLS</a>
+            <a href="hobbies.html" class="button">HOBBIES</a>
+
+        </div><!--/ #nav-->
+
+        <!--content - this area will change content from page to page (usually only one!)-->
+        <div id="content" class="border">
+
+            <p class="title">This is the HOME page.</p>
+
+        </div><!--/ #content-->
+
+        <!--footer - final area of page-->
+        <div id="footer" class="border bg-main">
+
+            <a href="#header" class="title">Back to top!</a>
+            <br>
+            <p>&copy; 2022, K TRUCHON | SE111C.HS</p>
+
+            <!--image of validation screenshot below-->
+            <img src="images/Capture.PNG" style="width:100%">
+
+        </div><!--/ #footer-->
+
+
+    </div><!--/ #wrapper-->
+    
+</body>
+</html>

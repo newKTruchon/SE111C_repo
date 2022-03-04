@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W5 Form - Updated for Validation</title>
+</head>
+<body>
+    <h1>Basic Form</h1>
+    <form>
+        <table>
+            <tbody>
+                <!--text field-->
+                <tr>
+                    <td>
+                        <label for="name">Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="name" name="name" maxlength=50>
+                    </td>
+                </tr>
+                <!--number field-->
+                <tr>
+                    <td>
+                        <label for="age">Age:</label>
+                    </td>
+                    <td>
+                        <input type="number" id="age" name="age">
+                    </td>
+                </tr>
+                <!--date type-->
+                <tr>
+                    <td>
+                        <label for="date">Date:</label>
+                    </td>
+                    <td>
+                        <input type="date" id="date" name="date">
+                    </td>
+                </tr>
+                <!--radio buttons-->
+                <!--note that non-text based input (options where we do not use the keyboard to enter characters but "select" our choice through other means) utilize a label for *each option* except for select, which sets them altogether-->
+                <tr>
+                    <td>
+                        <p>Pick Your Favorite Color</p>
+                    </td>
+                    <td>
+                        <!--each of the radio button name values match so that they are a set, and only ONE can be selected by the user-->
+                        <input type="radio" id="drink1" name="drinks" value="coke"><label for="drink1">Coke</label>
+                        <input type="radio" id="drink2" name="drinks" value="drPep"><label for="drink2">Dr.Pepper</label>
+                        <input type="radio" id="drink3" name="drinks" value="mrPibb"><label for="drink3">Mr.Pibb</label>
+                        <input type="radio" id="drink4" name="drinks" value="h2o"><label for="drink4">Water</label>
+                    </td>
+                </tr>
+                <!--checkboxes-->
+                <tr>
+                    <td>
+                        <p>Choose Your Favorite Subjects</p>
+                    </td>
+                    <td>
+                        <!--checkbox types should have different name values because they are used when more than one selection can be made, which requires multiple name values to store multiple values (if they all shared the same name value "vehicle" and a user selected all 3, we would only be able to access 'horse' because the name ("vehicle") becomes a variable of sorts, which will be overwritten and only be able to retain/hold the final value)-->
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="car"><label for="vehicle1">Car</label>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="ship"><label for="vehicle2">Ship</label>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="horse"><label for="vehicle3">Horse</label>
+                    </td>
+                </tr>
+                <!--drop-down menu-->
+                <tr>
+                    <td>
+                        <label for="color">Pick Your Favorite Color</label>
+                    </td>
+                    <td>
+                        <!--drop-downs are already grouped together by the selection element, so it is the only one with the name attribute-->
+                        <select name="color">
+                            <option value="r">Red</option>
+                            <option value="g">Green</option>
+                            <option value="b">Blue</option>
+                        </select>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    
+</body>
+</html>
